@@ -35,6 +35,7 @@ COMMON_GLOBAL_CFLAGS += -DSURFACEFLINGER_FORCE_SCREEN_RELEASE
 endif
 
 TARGET_BOARD_PLATFORM := exynos4
+TARGET_SOC := exynos4210
 TARGET_BOOTLOADER_BOARD_NAME := smdk4210
 TARGET_BOARD_INFO_FILE := device/samsung/galaxys2/board-info.txt
 
@@ -69,18 +70,18 @@ USE_OPENGL_RENDERER := true
 # HWComposer
 BOARD_USES_HWCOMPOSER := true
 BOARD_USE_SECTVOUT := true
+BOARD_USES_FIMGAPI := true
 
 # OMX
 BOARD_HAVE_CODEC_SUPPORT := SAMSUNG_CODEC_SUPPORT
-BOARD_USES_PROPRIETARY_OMX := SAMSUNG
+COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CODEC_SUPPORT
+BOARD_NONBLOCK_MODE_PROCESS := true
+BOARD_USE_STOREMETADATA := true
+BOARD_USE_METADATABUFFERTYPE := true
+BOARD_USES_MFC_FPS := true
 
 # Audio
 BOARD_USE_YAMAHAPLAYER := true
-
-# Camera
-ifeq ($(USE_CAMERA_STUB),false)
-BOARD_CAMERA_LIBRARIES := libcamera
-endif
 
 # RIL
 BOARD_MOBILEDATA_INTERFACE_NAME := "pdp0"
@@ -110,14 +111,17 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_VOLD_MAX_PARTITIONS := 12
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_DISC_HAS_MULTIPLE_MAJORS := true
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/s3c-usbgadget/gadget/lun%d/file"
 
 # Recovery
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/galaxys2/recovery/recovery_keys.c
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/galaxys2/recovery/graphics.c
-BOARD_UMS_LUNFILE := "/sys/class/android_usb/f_mass_storage/lun0/file"
+BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun0/file"
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
+
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/galaxys2/overlay/include
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := galaxys2,GT-I9100,GT-I9100M,GT-I9100P,GT-I9100T

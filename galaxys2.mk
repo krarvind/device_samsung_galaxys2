@@ -59,9 +59,9 @@ PRODUCT_COPY_FILES += $(foreach module,\
 	$(module):root/lib/modules/$(notdir $(module)))
 
 # Other kernel modules not in ramdisk
-PRODUCT_COPY_FILES += $(foreach module,\
-	$(filter-out $(RAMDISK_MODULES),$(wildcard device/samsung/galaxys2/modules/*.ko)),\
-	$(module):system/lib/modules/$(notdir $(module)))
+#PRODUCT_COPY_FILES += $(foreach module,\
+#	$(filter-out $(RAMDISK_MODULES),$(wildcard device/samsung/galaxys2/modules/*.ko)),\
+#	$(module):system/lib/modules/$(notdir $(module)))
 
 # The kernel itself
 PRODUCT_COPY_FILES += \
