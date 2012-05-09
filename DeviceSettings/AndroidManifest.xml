@@ -25,6 +25,7 @@
       
         <activity android:name=".mDNIeFragmentActivity" />
         <activity android:name=".RadioFragmentActivity" />
+		<activity android:name=".SensorsFragmentActivity" />
         
     </application>
 </manifest>

@@ -33,10 +33,13 @@ PRODUCT_COPY_FILES += \
 
 # Vold and Storage
 PRODUCT_COPY_FILES += \
-	device/samsung/galaxys2/configs/vold.fstab:system/etc/vold.fstab \
+	device/samsung/galaxys2/configs/vold.fstab:system/etc/vold.fstab
 
 PRODUCT_PROPERTY_OVERRIDES := \
-    ro.vold.switchablepair=/mnt/emmc,/mnt/sdcard
+	ro.vold.switchablepair=/mnt/emmc,/mnt/sdcard
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	persist.sys.vold.switchexternal=1
 
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
@@ -168,7 +171,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-	persist.sys.usb.config=mtp
+	persist.sys.usb.config=mass_storage
 
 $(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
 

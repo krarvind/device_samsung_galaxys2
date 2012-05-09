@@ -26,6 +26,11 @@
     <string name="calibrate_gyro_title_head">Kalibrieren</string>
     <string name="calibrate_gyro_summary_head">Lege dein Telefon auf einen geraden Untergrund und starte die Kalibrierung.</string>
 
+    <string name="backlight_subcat_title">Back Light</string>
+    <string name="backlight_timeout_title_head">Backlight Timeout</string>
+    <string name="backlight_timeout_summary_head">Adjust the delay before the touch key backlight automatically turns off</string>
+
+
     <string name="category_radio_title">Mobilfunk</string>
     <string name="hspa_title_head">HSPA</string>
     <string name="hspa_summary_head">Aktiviert HSDPA/HSUPA</string>

@@ -17,14 +17,24 @@
                 />
     </PreferenceCategory>
 
-    <PreferenceCategory
+    <!--PreferenceCategory
                 android:title="@string/touchkey_subcat_title">
-    <!-- Touchkey backlight -->
     <CheckBoxPreference
                 android:key="touchkey_light"
                 android:title="@string/touchkey_light_title_head"
                 android:summary="@string/touchkey_light_summary_head"
                 />
-    </PreferenceCategory>
+    </PreferenceCategory-->
+
+<PreferenceCategory
+    	android:title="@string/backlight_subcat_title">
+    <com.cyanogenmod.settings.device.TouchKeyBacklightTimeout 
+	        android:key="backlight_timeout"
+	        android:title="@string/backlight_timeout_title_head"
+	        android:summary="@string/backlight_timeout_summary_head"
+	        android:entries="@array/backlight_timeout_entries"
+  			android:entryValues="@array/backlight_timeout_entries_values"
+  			android:defaultValue="1600" />
+	</PreferenceCategory>
 </PreferenceScreen>
 
