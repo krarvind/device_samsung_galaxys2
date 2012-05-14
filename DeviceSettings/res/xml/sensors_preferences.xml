@@ -26,7 +26,7 @@
                 />
     </PreferenceCategory-->
 
-<PreferenceCategory
+<!--PreferenceCategory
     	android:title="@string/backlight_subcat_title">
     <com.cyanogenmod.settings.device.TouchKeyBacklightTimeout 
 	        android:key="backlight_timeout"
@@ -35,6 +35,14 @@
 	        android:entries="@array/backlight_timeout_entries"
   			android:entryValues="@array/backlight_timeout_entries_values"
   			android:defaultValue="1600" />
-	</PreferenceCategory>
+
+   <com.cyanogenmod.settings.device.BLNTimeout 
+	        android:key="bln_timeout"
+	        android:title="@string/bln_timeout_title_head"
+	        android:summary="@string/bln_timeout_summary_head"
+	        android:entries="@array/bln_timeout_entries"
+  			android:entryValues="@array/bln_timeout_entries_values"
+  			android:defaultValue="60000" />
+	</PreferenceCategory-->
 </PreferenceScreen>
 

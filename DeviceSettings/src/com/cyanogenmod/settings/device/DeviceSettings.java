@@ -46,6 +46,11 @@ public class DeviceSettings extends FragmentActivity {
     public static final String KEY_TOUCHSCREEN_SENSITIVITY = "touchscreen_sensitivity";
     public static final String KEY_TOUCHKEY_LIGHT = "touchkey_light";
     public static final String KEY_BACKLIGHT_TIMEOUT = "backlight_timeout";
+    public static final String KEY_BLN_TIMEOUT = "bln_timeout";
+	public static final String KEY_BLN_LIGHT = "bln_light";
+	public static final String KEY_BLN_BREATHE = "bln_breathe";
+	public static final String KEY_BLN_BLINK = "bln_blink";
+	public static final String KEY_BLN_FADE = "bln_fade";
 
     ViewPager mViewPager;
     TabsAdapter mTabsAdapter;
@@ -70,6 +75,8 @@ public class DeviceSettings extends FragmentActivity {
                 mDNIeFragmentActivity.class, null);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.category_sensors_title),
                 SensorsFragmentActivity.class, null);
+		mTabsAdapter.addTab(bar.newTab().setText(R.string.category_backlight_title),
+                BackLightFragmentActivity.class, null);
 
         if (savedInstanceState != null) {
             bar.setSelectedNavigationItem(savedInstanceState.getInt("tab", 0));

@@ -29,9 +29,20 @@
     <string name="touchkey_light_title_head">Enable keys backlight</string>
     <string name="touchkey_light_summary_head">Light up touch keys when screen is on</string> 
 
+	<string name="category_backlight_title">BackLights</string>
 	<string name="backlight_subcat_title">Back Light</string>
     <string name="backlight_timeout_title_head">Backlight Timeout</string>
     <string name="backlight_timeout_summary_head">Adjust the delay before the touch key backlight automatically turns off</string>
+	<string name="bln_light_title_head">BLN Light</string>
+    <string name="bln_light_summary_head">Turn BLN On/off</string>
+	<string name="bln_timeout_title_head">BLN Timeout</string>
+    <string name="bln_timeout_summary_head">Adjust the delay before BLN turns off</string>
+	<string name="bln_breathe_title_head">BLN Breathe</string>
+    <string name="bln_breathe_summary_head">Turn BLN Breathing On/off</string>
+	<string name="bln_blink_title_head">BLN Blink</string>
+    <string name="bln_blink_summary_head">Turn BLN Blink On/off</string>
+	<string name="bln_fade_title_head">BLN fade</string>
+    <string name="bln_fade_summary_head">Turn BLN fade On/off</string>
 
 
     <string name="category_radio_title">Radio</string>
