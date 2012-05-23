@@ -38,6 +38,18 @@
                 android:title="@string/bln_fade_title_head"
                 android:summary="@string/bln_fade_summary_head"
                 />
+	<com.cyanogenmod.settings.device.BLNBatteryLimit 
+	        android:key="bln_battery_limit"
+	        android:title="@string/bln_battery_limit_title_head"
+	        android:summary="@string/bln_battery_limit_summary_head"
+	        android:entries="@array/bln_battery_limit_entries"
+  			android:entryValues="@array/bln_battery_limit_entries_values"
+  			android:defaultValue="20" />
+	<CheckBoxPreference
+                android:key="bln_enable_charging"
+                android:title="@string/bln_enable_charging_title_head"
+                android:summary="@string/bln_enable_charging_summary_head"
+                />
 
    
 	</PreferenceCategory>

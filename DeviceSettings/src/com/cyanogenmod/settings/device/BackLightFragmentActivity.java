@@ -39,6 +39,7 @@ public class BackLightFragmentActivity extends PreferenceFragment {
 	private static final String FILE_BREATHING_TOGGLE = "/sys/class/misc/backlightnotification/breathing_enabled";
     private static final String FILE_BLINKING_TOGGLE = "/sys/class/misc/backlightnotification/blinking_enabled";
 	private static final String FILE_LEDFADE_TOGGLE = "/sys/class/misc/backlightnotification/led_fadeout";
+	private static final String FILE_BLN_ENABLE_CHARGING_TOGGLE = "/sys/class/misc/backlightnotification/enabled_charging";
     
     private TouchKeyBacklightTimeout mTouchKeyBacklightTimeout;
     private BLNTimeout mBLNTimeout;
@@ -79,6 +80,9 @@ public class BackLightFragmentActivity extends PreferenceFragment {
 			else if (key.compareTo(DeviceSettings.KEY_BLN_FADE) == 0) {
             boxValue = (((CheckBoxPreference)preference).isChecked() ? "1" : "0");
             Utils.writeValue(FILE_LEDFADE_TOGGLE, boxValue);
+        }   else if (key.compareTo(DeviceSettings.KEY_BLN_ENABLE_CHARGING) == 0) {
+            boxValue = (((CheckBoxPreference)preference).isChecked() ? "1" : "0");
+            Utils.writeValue(FILE_BLN_ENABLE_CHARGING_TOGGLE, boxValue);
         }
 
         return true;
@@ -94,6 +98,7 @@ public class BackLightFragmentActivity extends PreferenceFragment {
 		Utils.writeValue(FILE_BREATHING_TOGGLE, sharedPrefs.getString(DeviceSettings.KEY_BLN_BREATHE, "1"));
 		Utils.writeValue(FILE_BLINKING_TOGGLE, sharedPrefs.getString(DeviceSettings.KEY_BLN_BLINK, "1"));
 		Utils.writeValue(FILE_LEDFADE_TOGGLE, sharedPrefs.getString(DeviceSettings.KEY_BLN_FADE, "1"));
+		Utils.writeValue(FILE_BLN_ENABLE_CHARGING_TOGGLE, sharedPrefs.getString(DeviceSettings.KEY_BLN_ENABLE_CHARGING, "1"));
     }
 }
 

@@ -43,6 +43,10 @@
     <string name="bln_blink_summary_head">Turn BLN Blink On/off</string>
 	<string name="bln_fade_title_head">BLN fade</string>
     <string name="bln_fade_summary_head">Turn BLN fade On/off</string>
+	<string name="bln_battery_limit_title_head">BLN Battery Limit</string>
+    <string name="bln_battery_limit_summary_head">Set the value below which BLN tunrs off</string>
+	<string name="bln_enable_charging_title_head">BLN Enabled Charging</string>
+    <string name="bln_enable_charging_summary_head">Turn BLN On/off during charging</string>
 
 
     <string name="category_radio_title">Radio</string>

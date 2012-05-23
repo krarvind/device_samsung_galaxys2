@@ -3806,6 +3806,7 @@ found in the list of installed apps.</string>
     <string name="slim_settings_title">ASS</string>
     <string name="device_settings_title">Device Settings</string>
     <string name="ns_tools_settings_title">NS Tools</string>
+	<string name="themes_title">Themes</string>
 	
 	<!-- Display | Backlight -->
 	<string name="backlight_title">Custom backlight settings</string>

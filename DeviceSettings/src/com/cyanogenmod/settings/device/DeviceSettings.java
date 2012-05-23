@@ -51,6 +51,8 @@ public class DeviceSettings extends FragmentActivity {
 	public static final String KEY_BLN_BREATHE = "bln_breathe";
 	public static final String KEY_BLN_BLINK = "bln_blink";
 	public static final String KEY_BLN_FADE = "bln_fade";
+	public static final String KEY_BLN_BATTERY_LIMIT = "bln_battery_limit";
+	public static final String KEY_BLN_ENABLE_CHARGING = "bln_enable_charging";
 
     ViewPager mViewPager;
     TabsAdapter mTabsAdapter;

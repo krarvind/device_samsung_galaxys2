@@ -112,6 +112,22 @@
 		<item>-1</item>
     </string-array>
 
+	<string-array name="bln_battery_limit_entries">
+        <item>Default (20 %)</item>
+        <item>5%</item>
+        <item>10%</item>
+        <item>15%</item>
+        <item>30%</item>
+    </string-array>
+
+    <string-array name="bln_battery_limit_entries_values" translatable="false">
+        <item>20</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>30</item>
+    </string-array>
+
     <string-array name="touchscreen_sensitivity_entries">
         <item>10</item>
         <item>20</item>

@@ -76,15 +76,14 @@
 			  android:targetPackage="com.cyanogenmod.settings.device"
 			  android:targetClass="com.cyanogenmod.settings.device.DeviceSettings" />
 	</header>
-        <header
-		android:id="@+id/ns_tools_settings"
-		android:title="@string/ns_tools_settings_title"
-		android:icon="@drawable/ic_ns_tools">
-	    <intent
-		  android:action="android.intent.action.MAIN"
-		  android:targetPackage="mobi.cyann.nstools"
-		  android:targetClass="mobi.cyann.nstools.MainActivity" />
-      </header>
+    
+	<header android:icon="@drawable/ic_settings_themes"
+            android:title="@string/themes_title">
+        <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.tmobile.themechooser"
+                android:targetClass="com.tmobile.themechooser.ThemeChooser" />
+    </header>
 
     <!-- DEVICE -->
     <header android:title="@string/header_category_device" />
