@@ -227,6 +227,22 @@ on post-fs-data
 # Vibetonz
     chmod 0660 /dev/tspdrv
     chown root shell /dev/tspdrv
+	chmod 0660 /sys/vibrator/pwm_val
+    chown system system /sys/vibrator/pwm_val
+
+# BLN permissions
+	chmod 0660 /sys/class/misc/backlightnotification/led_timeout
+    chown system system /sys/class/misc/backlightnotification/led_timeout
+	chmod 0660 /sys/class/misc/backlightnotification/enabled
+    chown system system /sys/class/misc/backlightnotification/enabled
+	chmod 0660 /sys/class/misc/backlightnotification/breathing_enabled
+    chown system system /sys/class/misc/backlightnotification/breathing_enabled
+	chmod 0660 /sys/class/misc/backlightnotification/blinking_enabled
+    chown system system /sys/class/misc/backlightnotification/blinking_enabled
+	chmod 0660 /sys/class/misc/backlightnotification/led_fadeout
+    chown system system /sys/class/misc/backlightnotification/led_fadeout
+	chmod 0660 /sys/class/misc/backlightnotification/enabled_charging
+    chown system system /sys/class/misc/backlightnotification/enabled_charging
 
 # Permissions for LCD
     chown system radio /sys/class/lcd/panel/lcd_power

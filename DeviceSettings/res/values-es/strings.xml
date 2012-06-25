@@ -36,5 +36,8 @@
     <string name="backlight_timeout_title_head">Backlight Timeout</string>
     <string name="backlight_timeout_summary_head">Adjust the delay before the touch key backlight automatically turns off</string>
 
-
+    <string name="category_haptic_title">Háptica</string>
+    <string name="vibrator_subcat_title">Vibración</string>
+    <string name="vibrator_intensity_title_head">Intensidad de vibración</string>
+    <string name="vibrator_intensity_summary_head">Establecer la intensidad de la vibración</string>
 </resources>

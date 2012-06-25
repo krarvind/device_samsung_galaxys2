@@ -30,6 +30,10 @@
     <string name="backlight_timeout_title_head">Backlight Timeout</string>
     <string name="backlight_timeout_summary_head">Adjust the delay before the touch key backlight automatically turns off</string>
 
+	<string name="category_haptic_title">Haptik</string>
+    <string name="vibrator_subcat_title">Vibrator</string>
+    <string name="vibrator_intensity_title_head">Vibrator Intensität</string>
+    <string name="vibrator_intensity_summary_head">Setze Vibrator Intensität</string>
 
     <string name="category_radio_title">Mobilfunk</string>
     <string name="hspa_title_head">HSPA</string>

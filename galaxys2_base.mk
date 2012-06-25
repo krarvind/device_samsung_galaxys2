@@ -47,7 +47,6 @@ PRODUCT_COPY_FILES += \
 
 # Wifi
 PRODUCT_COPY_FILES += \
-	device/samsung/galaxys2/configs/nvram_net.txt:system/etc/nvram_net.txt \
 	device/samsung/galaxys2/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
 	device/samsung/galaxys2/configs/bcmdhd.cal:system/etc/wifi/bcmdhd.cal
 
@@ -64,6 +63,7 @@ PRODUCT_COPY_FILES += \
 
 # Packages
 PRODUCT_PACKAGES := \
+    audio.a2dp.default \
     Camera \
     camera.exynos4 \
     com.android.future.usb.accessory \
@@ -75,9 +75,7 @@ PRODUCT_PACKAGES := \
 # HAL
 PRODUCT_PACKAGES += \
     lights.exynos4 \
-    sensors.exynos4 \
     libhwconverter \
-    libswconverter \
     libs5pjpeg \
     libfimg
 
@@ -88,7 +86,7 @@ PRODUCT_PACKAGES += \
 # OMX
 PRODUCT_PACKAGES += \
     libstagefrighthw \
-    libcsc \
+    libseccscapi \
     libsecbasecomponent \
     libsecosal \
     libSEC_OMX_Resourcemanager \
@@ -120,14 +118,9 @@ PRODUCT_PACKAGES += \
 
 # Live Wallpapers
 PRODUCT_PACKAGES += \
-	Galaxy4 \
-	HoloSpiralWallpaper \
-	LiveWallpapers \
 	LiveWallpapersPicker \
-	MagicSmokeWallpapers \
 	NoiseField \
 	PhaseBeam \
-	VisualizationWallpapers \
 	librs_jni
 
 # These are the hardware-specific features
@@ -165,7 +158,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	hwui.render_dirty_regions=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.sf.lcd_density=240
+	ro.sf.lcd_density=182
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -176,4 +169,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 $(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
 
 # Include exynos4 platform specific parts
-$(call inherit-product, hardware/samsung/exynos4/Android.mk)
+TARGET_HAL_PATH := hardware/samsung/exynos4/hal
+TARGET_OMX_PATH := hardware/samsung/exynos/multimedia/openmax
+$(call inherit-product, hardware/samsung/exynos4210.mk)

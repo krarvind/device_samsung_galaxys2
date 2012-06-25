@@ -38,8 +38,6 @@ public class SensorsFragmentActivity extends PreferenceFragment {
     private static final String FILE_USE_GYRO_CALIB = "/sys/class/sec/gsensorcal/calibration";
     private static final String FILE_TOUCHKEY_LIGHT = "/data/.disable_touchlight";
     private static final String FILE_TOUCHKEY_TOGGLE = "/sys/class/sec/sec_touchkey/brightness";
-    /*private TouchKeyBacklightTimeout mTouchKeyBacklightTimeout;
-    private BLNTimeout mBLNTimeout;*/
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,11 +45,6 @@ public class SensorsFragmentActivity extends PreferenceFragment {
 
         addPreferencesFromResource(R.xml.sensors_preferences);
 
- 		/*mTouchKeyBacklightTimeout = (TouchKeyBacklightTimeout) findPreference(DeviceSettings.KEY_BACKLIGHT_TIMEOUT);
-        mTouchKeyBacklightTimeout.setEnabled(mTouchKeyBacklightTimeout.isSupported());
-
-		mBLNTimeout = (BLNTimeout) findPreference(DeviceSettings.KEY_BLN_TIMEOUT);
-        mBLNTimeout.setEnabled(mBLNTimeout.isSupported());*/
      }
 
     @Override

@@ -73,4 +73,11 @@
         <item>100</item>
     </string-array>
 
+    <string-array name="vibrator_intensity_entries">
+        <item>0%</item>
+        <item>25%</item>
+        <item>50% (Predeterminado)</item>
+        <item>75%</item>
+        <item>100%</item>
+    </string-array>
 </resources>

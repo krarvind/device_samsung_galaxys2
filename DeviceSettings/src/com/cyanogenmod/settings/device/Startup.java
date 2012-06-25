@@ -29,7 +29,8 @@ public class Startup extends BroadcastReceiver {
         mDNIeNegative.restore(context);
         mDNIeOutdoor.restore(context);
         RadioFragmentActivity.restore(context);
-        //TouchKeyBacklightTimeout.restore(context);
+        HapticFragmentActivity.restore(context);
+        VibratorIntensity.restore(context);
     }
 
 }

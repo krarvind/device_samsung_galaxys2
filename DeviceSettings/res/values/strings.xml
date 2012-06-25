@@ -48,6 +48,10 @@
 	<string name="bln_enable_charging_title_head">BLN Enabled Charging</string>
     <string name="bln_enable_charging_summary_head">Turn BLN On/off during charging</string>
 
+	<string name="category_haptic_title">Haptic</string>
+    <string name="vibrator_subcat_title">Vibrator</string>
+    <string name="vibrator_intensity_title_head">Vibrator Intensity</string>
+    <string name="vibrator_intensity_summary_head">Set vibrator intensity</string>
 
     <string name="category_radio_title">Radio</string>
     <string name="hspa_title_head">HSPA</string>
